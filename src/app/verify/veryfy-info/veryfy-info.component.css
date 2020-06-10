@@ -1,0 +1,10 @@
+form{
+    width: 372px;
+    margin: 50px auto;
+}
+
+.error{
+    color: red;
+    text-align: left;
+    margin-left:  15px;
+}
