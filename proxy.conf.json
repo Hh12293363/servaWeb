@@ -1,0 +1,6 @@
+{
+    "/manage": {
+      "target": "http://106.12.148.165:8080/manage/",
+      "secure": false
+    }
+  }
