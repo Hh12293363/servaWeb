@@ -11,18 +11,17 @@ import { of } from 'rxjs';
 })
 export class UserService {
   url = 'http://106.12.148.165:9080/manage/admin/';
-
+  
   constructor(private http: HttpClient) {
 
   }
 
-  login(user: LoguserInfo) {
-    
+  login(user: LoguserInfo) {    
     
     return this.http.post<Result<ResLogin>>(this.url + 'login?_allow_anonymous=true', user).pipe(
       map((r: Result<ResLogin>) => {
         if (r.code === 0) {
-          console.log(r);
+          // console.log(r);
           localStorage.ResLogin = r.data;
           return true;
         } else {
@@ -32,4 +31,13 @@ export class UserService {
       catchError(error => of(false))
     )
   }
+
+
+
+
+
+
+
+
+
 }

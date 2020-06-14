@@ -7,7 +7,7 @@ export class LoguserInfo {
     }
 }
 
-export interface ResLogin {
+export class ResLogin {
     id: number;
     account: string;
     accountType: number;

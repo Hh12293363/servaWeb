@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VerifyModule } from './verify/verify.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { VerifyModule } from './verify/verify.module';
     BrowserModule,
     HttpClientModule,
     VerifyModule,
+    MainModule,
     AppRoutingModule
   ],
   providers: [],
