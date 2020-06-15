@@ -32,12 +32,11 @@ export class UserService {
     )
   }
 
-
-
-
-
-
-
-
+  GetMakerOwnerEquipment(){
+    let params: any = {};
+    params.port = '1';
+    params.adminId = localStorage.ResLogin.id;
+    return this.http.get<Result<any>>(this.url + '/makerOwnerEquipment', params);
+  }
 
 }
