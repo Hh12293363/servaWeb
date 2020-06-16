@@ -28,14 +28,10 @@ export class VeryfyInfoComponent implements OnInit {
       (result:boolean)=>{
         if(result){
           //设置token
-          if(localStorage.ResLogin){
-            let resLogin:ResLogin = localStorage.ResLogin;
-            this.tk.setToken(resLogin);
-          }
-          console.log('登录成功')
-
+          this.tk.setToken(this.us.userInfo.token);
+          
           //导航到home
-          this.router.navigate(['/main']);
+          this.router.navigate(['/main/home']);
 
         }else{
           alert('登录失败');
