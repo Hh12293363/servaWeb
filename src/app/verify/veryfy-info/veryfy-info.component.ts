@@ -34,6 +34,7 @@ export class VeryfyInfoComponent implements OnInit {
           this.router.navigate(['/main/home']);
 
         }else{
+          console.log(result)
           alert('登录失败');
         }
       }

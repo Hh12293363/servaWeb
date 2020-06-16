@@ -21,8 +21,8 @@ export class UserService {
 
     return this.http.post<Result<ResLogin>>(this.url + 'login?_allow_anonymous=true', user).pipe(
       map((r: Result<ResLogin>) => {
+        // console.log(r)
         if (r.code === 0) {
-          // console.log(r);
           this.userInfo = new ResLogin();
           this.userInfo.id = r.data.id;
           this.userInfo.account = r.data.account;
