@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { VerifyModule } from './verify/verify.module';
 import { MainModule } from './main/main.module';
 import { BaseInterceptor } from './base-interceptor';
+import { LineSeriesService, ChartModule } from '@syncfusion/ej2-angular-charts';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { BaseInterceptor } from './base-interceptor';
     VerifyModule,
     MainModule,
     AppRoutingModule,
+    // ChartModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: BaseInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: BaseInterceptor, multi: true },
+    // LineSeriesService
   ],
   bootstrap: [AppComponent]
 })

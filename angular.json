@@ -25,7 +25,11 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@syncfusion/ej2-base/styles/material.css",
+              "node_modules/@syncfusion/ej2-icons/styles/material.css",
+              "node_modules/@syncfusion/ej2-buttons/styles/material.css",
+              "node_modules/@syncfusion/ej2-angular-popups/styles/material.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
@@ -124,6 +128,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "servaWeb-dev"
 }

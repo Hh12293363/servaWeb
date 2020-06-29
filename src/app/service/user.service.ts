@@ -11,7 +11,7 @@ import { of } from 'rxjs';
 })
 export class UserService {
   url = 'http://106.12.148.165:9080/manage/admin/';
-  public userInfo: ResLogin;
+  public userInfo: ResLogin= new ResLogin();
 
   constructor(private http: HttpClient) {
 
@@ -23,7 +23,6 @@ export class UserService {
       map((r: Result<ResLogin>) => {
         // console.log(r)
         if (r.code === 0) {
-          this.userInfo = new ResLogin();
           this.userInfo.id = r.data.id;
           this.userInfo.account = r.data.account;
           this.userInfo.accountType = r.data.accountType;
@@ -60,8 +59,9 @@ export class UserService {
   GetMakerOwnerEquipment() {
     let params: any = {};
     params.port = '1';
-    params.adminId = localStorage.ResLogin.id;
-    return this.http.get<Result<any>>(this.url + '/makerOwnerEquipment', params);
+    // params.adminId = localStorage.ResLogin.id;
+    params.adminId = this.userInfo.id;
+    return this.http.get<Result<any>>(this.url + 'makerOwnerEquipment', params);
   }
 
 }
